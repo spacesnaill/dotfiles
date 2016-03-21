@@ -1,0 +1,17 @@
+# Git configuration file.
+
+[user]
+
+    name = Jason Barone
+    email = jason@jasonbarone.com
+
+
+[credential]
+
+    helper = osxkeychain
+
+
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true

@@ -1,0 +1,30 @@
+# ------------------------------------------------------------------------------------------------
+# Bash Profile
+# ------------------------------------------------------------------------------------------------
+
+export PATH=$PATH:~/bin
+
+# Set Sublime Text as a default editor
+export EDITOR='subl -w'
+
+# Brew coreutils
+export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+
+# Load shell dotfiles
+# * ~/.path can be used to extend `$PATH`.
+# * ~/.extra can be used for other settings you don’t want to commit.
+for file in ~/.{path,bash_prompt,bash_aliases,functions,extra}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
+# Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# Updates PATH for the Google Cloud SDK.
+source '/Users/j/google-cloud-sdk/path.bash.inc'
+
+# Enables shell command completion for gcloud.
+source '/Users/j/google-cloud-sdk/completion.bash.inc'
+
+test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash

@@ -1,0 +1,36 @@
+#!/bin/bash
+
+CONFIG_DIR=~/Dropbox/_config/dotfiles
+
+cd ~
+
+echo "Linking local config to ~/Dropbox/_config dotfiles..."
+
+rm -rf .bash_aliases
+ln -s ${CONFIG_DIR}/bash_aliases .bash_aliases
+
+rm -rf .bash_profile
+ln -s ${CONFIG_DIR}/bash_profile .bash_profile
+
+rm -rf .bash_prompt
+ln -s ${CONFIG_DIR}/bash_prompt .bash_prompt
+
+rm -rf .gitconfig
+ln -s ${CONFIG_DIR}/gitconfig .gitconfig
+
+rm -rf .wgetrc
+ln -s ${CONFIG_DIR}/wgetrc .wgetrc
+
+rm -rf .curlrc
+ln -s ${CONFIG_DIR}/curlrc .curlrc
+
+rm -rf .mackup.cfg
+ln -s ${CONFIG_DIR}/mackup.cfg .mackup.cfg
+
+
+# Link local Sublime Text config to Dropbox
+echo "Linking local Sublime Text config to ~/Dropbox/_config/appdata/Sublime..."
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ && rm -r User && ln -s ~/Dropbox/_config/appdata/Sublime/User
+
+
+echo "Finished pointing local config to dotfiles..."
