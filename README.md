@@ -36,11 +36,11 @@ My `dotfiles` folder includes config dotfiles and scripts.
 
 ### Setup scripts
 
-* [symlink](/scripts/symlink) - Symlinks local config files to your Dropbox config folder.
-* [setup-brew](/scripts/setup-brew) - Install and configure packages managed by Homebrew.
-* [setup-apps](/scripts/setup-apps) - Install and configure applications managed by Homebrew Cask.
-* [setup-npm](/scripts/setup-npm) - Install and configure packages managed by NPM.
-* [setup-osx](/scripts/setup-osx) - Set your OS X defaults. Reboot required.
+* [symlink](/dotfiles/scripts/symlink) - Symlinks local config files to your Dropbox config folder.
+* [setup-brew](/dotfiles/scripts/setup-brew) - Install and configure packages managed by Homebrew.
+* [setup-apps](/dotfiles/scripts/setup-apps) - Install and configure applications managed by Homebrew Cask.
+* [setup-npm](/dotfiles/scripts/setup-npm) - Install and configure packages managed by NPM.
+* [setup-osx](/dotfiles/scripts/setup-osx) - Set your OS X defaults. Reboot required.
 
 
 
