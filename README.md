@@ -12,6 +12,7 @@ The folder structure of my `~/Dropbox/_config` folder is this repo, plus some st
 My `dotfiles` folder includes config dotfiles and scripts.
 
 ```shell
+_config/
 ├── README.md
 ├── appdata
 │   ├── 1Password

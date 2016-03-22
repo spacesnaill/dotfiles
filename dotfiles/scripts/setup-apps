@@ -1,12 +1,25 @@
 #!/bin/bash
 
-# Install fonts and applications with Homebrew Cask
+
+###############################################################################
+# setup-apps
+#
+# A shell script to automate application setup on Mac OS X.
+###############################################################################
+
+
+###############################################################################
+# Install fonts and applications with Homebrew cask
+###############################################################################
 echo "Homebrew: installing Homebrew Cask..."
 brew install caskroom/cask/brew-cask # install Cask
 brew tap caskroom/versions # install beta versions with Cask
 brew tap caskroom/fonts # install fonts with Cask
 
-# Install fonts
+
+###############################################################################
+# Install fonts with Homebrew Cask
+###############################################################################
 # echo "Homebrew Cask: installing fonts..."
 # fonts=(
 #   font-source-sans-pro
@@ -15,7 +28,10 @@ brew tap caskroom/fonts # install fonts with Cask
 # )
 # brew cask install ${fonts[@]}
 
-# Install applications
+
+###############################################################################
+# Install applications with Homebrew Cask
+###############################################################################
 echo "Homebrew Cask: installing apps..."
 brew cask install 1password
 brew cask install adobe-creative-cloud
@@ -43,12 +59,19 @@ brew cask install sublime-text3
 brew cask install teamviewer
 brew cask install textexpander
 
+
+###############################################################################
 # Launch apps from Alfred
+###############################################################################
 echo "Homebrew Cask: linking apps to Alfred..."
 brew cask alfred link
 
+
+###############################################################################
 # Copy application preferences & config files with Mackup
+###############################################################################
 # echo "Mackup: restoring application preferences..."
 # mackup restore
+
 
 echo "Done!"

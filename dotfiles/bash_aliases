@@ -1,6 +1,11 @@
-# ###############################################
+###############################################################################
+# bash_aliases
+###############################################################################
+
+
+###############################################################################
 # Command Line Shortcuts
-# ###############################################
+###############################################################################
 
 # Directory navigation
 alias ..="cd .."
@@ -82,10 +87,9 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 alias reload="exec $SHELL -l"
 
 
-
-# ###############################################
+###############################################################################
 # Networking
-# ###############################################
+###############################################################################
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -102,10 +106,9 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 done
 
 
-
-# ###############################################
+###############################################################################
 # Desktop
-# ###############################################
+###############################################################################
 
 # Show/hide hidden files in Finder
 alias showfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
@@ -123,10 +126,9 @@ alias spoton="sudo mdutil -a -i on"
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 
-
-# ###############################################
+###############################################################################
 # Fixes / Cleanups
-# ###############################################
+###############################################################################
 
 # Easy Update
 # OS X software updates, Homebrew, Ruby gems, NPM, etc
@@ -154,10 +156,9 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 alias fixlaunchpad="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock"
 
 
-
-# ###############################################
+###############################################################################
 # Dev
-# ###############################################
+###############################################################################
 
 # Squarespace Node Server Dev
 alias sqsd='node ~/Dropbox/Projects/personal/node-squarespace-server/bin/squarespace-server server —port=8080 —reload'

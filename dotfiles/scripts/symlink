@@ -1,5 +1,13 @@
 #!/bin/bash
 
+
+###############################################################################
+# symlink
+#
+# A shell script to setup symlinks for your local config files.
+###############################################################################
+
+
 CONFIG_DIR=~/Dropbox/_config/dotfiles
 
 cd ~
