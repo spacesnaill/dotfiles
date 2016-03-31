@@ -25,6 +25,7 @@ alias cdsf='cd ~/Dropbox/Projects/dev/personal/squarefront'
 alias g="git"
 alias h="history"
 alias j="jobs"
+alias s="subl"
 
 # Detect which `ls` is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -161,7 +162,7 @@ alias fixlaunchpad="defaults write com.apple.dock ResetLaunchPad -bool true; kil
 ###############################################################################
 
 # Squarespace Node Server Dev
-alias sqsd='node ~/Dropbox/Projects/personal/node-squarespace-server/bin/squarespace-server server —port=8080 —reload'
+alias sqsd='node ~/Dropbox/Projects/dev/personal/node-squarespace-server/bin/squarespace-server server —port=8080 —reload'
 
 # jQuery Custom Build
 # Build jQuery without all the bloat. Clone jQuery, cd into the project directory, run this alias.
