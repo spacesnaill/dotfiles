@@ -29,6 +29,3 @@ source '/Users/j/google-cloud-sdk/completion.bash.inc'
 
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 
-# Squarespace Template Compiler
-export PATH="~/Dropbox/Projects/dev/personal/squarespace-template-compiler:$PATH"
-

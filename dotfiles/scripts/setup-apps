@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 ###############################################################################
 # setup-apps
 #
@@ -48,9 +47,11 @@ brew cask install github-desktop
 brew cask install gitter
 brew cask install google-chrome
 brew cask install google-drive
+brew cask install imageoptin
 brew cask install obs
 brew cask install rescuetime
 brew cask install screenflow
+brew cask install screenhero
 brew cask install sketch
 brew cask install sketch-toolbox
 brew cask install skype
@@ -58,6 +59,7 @@ brew cask install spotify
 brew cask install sublime-text3
 brew cask install teamviewer
 brew cask install textexpander
+brew cask install toggldesktop
 
 
 ###############################################################################

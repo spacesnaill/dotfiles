@@ -162,7 +162,8 @@ alias fixlaunchpad="defaults write com.apple.dock ResetLaunchPad -bool true; kil
 ###############################################################################
 
 # Squarespace Node Server Dev
-alias sqsd='node ~/Dropbox/Projects/dev/personal/node-squarespace-server/bin/squarespace-server server —port=8080 —reload'
+alias sqsd='node ~/Dropbox/Projects/dev/personal/squarespace-node-server/bin/squarespace-server server —port=8080'
+alias sqsl='node ~/Dropbox/Projects/dev/personal/node-squarespace-server/bin/squarespace-server server —port=8080'
 
 # jQuery Custom Build
 # Build jQuery without all the bloat. Clone jQuery, cd into the project directory, run this alias.
