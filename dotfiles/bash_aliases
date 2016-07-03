@@ -20,7 +20,7 @@ alias d="cd ~/Dropbox"
 alias dl="cd ~/Dropbox/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Dropbox/Projects"
-alias cddev='cd ~/Dropbox/Projects/dev'
+alias dv='cd ~/Dropbox/Projects/dev'
 alias cdsf='cd ~/Dropbox/Projects/dev/personal/squarefront'
 alias g="git"
 alias h="history"
@@ -155,17 +155,3 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 # Reload Launchpad
 # http://www.defaults-write.com/active-defaults-setting-for-os-x-launchpad/#.U_issVNdUeM
 alias fixlaunchpad="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock"
-
-
-###############################################################################
-# Dev
-###############################################################################
-
-# Squarespace Node Server Dev
-alias sqsd='node ~/Dropbox/Projects/dev/personal/squarespace-node-server/bin/squarespace-server server —port=8080'
-alias sqsl='node ~/Dropbox/Projects/dev/personal/node-squarespace-server/bin/squarespace-server server —port=8080'
-
-# jQuery Custom Build
-# Build jQuery without all the bloat. Clone jQuery, cd into the project directory, run this alias.
-alias jquerycustom='grunt custom:-deprecated,-effects,-effects/Tween,-effects/animatedSelector,-css,-css/addGetHookIf,-css/adjustCSS,-css/curCSS,-css/hiddenVisibleSelectors,-css/showHide,-css/support,-css/var/cssExpand,-css/var/getStyles,-css/var/isHidden,-css/var/rmargin,-css/var/rnumnonpx,-css/var/swap,-dimensions,-offset,-wrap,-exports/amd,-event/alias,-core/ready'
-

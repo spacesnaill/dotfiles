@@ -7,8 +7,11 @@ export PATH=$PATH:~/bin
 # Set Sublime Text as a default editor
 export EDITOR='subl -w'
 
-# Brew coreutils
+# Homebrew coreutils
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+
+# Homebrew Defaults
+# export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
 
 # Load shell dotfiles
 # * ~/.path can be used to extend `$PATH`.

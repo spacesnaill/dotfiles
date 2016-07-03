@@ -11,9 +11,9 @@
 # Install fonts and applications with Homebrew cask
 ###############################################################################
 echo "Homebrew: installing Homebrew Cask..."
-brew install caskroom/cask/brew-cask # install Cask
-brew tap caskroom/versions # install beta versions with Cask
-brew tap caskroom/fonts # install fonts with Cask
+# brew install caskroom/cask/brew-cask # install Cask
+# brew tap caskroom/versions # install beta versions with Cask
+# brew tap caskroom/fonts # install fonts with Cask
 
 
 ###############################################################################
@@ -40,23 +40,32 @@ brew cask install backblaze
 brew cask install boom
 brew cask install dash
 # brew cask install dropbox
+brew cask install fetch
 brew cask install firefox
 brew cask install flux
-brew cask install fontprep
+brew cask install framer
 brew cask install github-desktop
 brew cask install gitter
 brew cask install google-chrome
 brew cask install google-drive
-brew cask install imageoptin
+brew cask install hipchat
+brew cask install imageoptim
+brew cask install java
 brew cask install obs
+brew cask install omnidazzle
+brew cask install paparazzi
+brew cask install postman
+brew cask install private-internet-access
 brew cask install rescuetime
 brew cask install screenflow
 brew cask install screenhero
 brew cask install sketch
 brew cask install sketch-toolbox
 brew cask install skype
+brew cask install slack
+brew cask install spectacle
 brew cask install spotify
-brew cask install sublime-text3
+brew cask install sublime-text
 brew cask install teamviewer
 brew cask install textexpander
 brew cask install toggldesktop
@@ -65,8 +74,8 @@ brew cask install toggldesktop
 ###############################################################################
 # Launch apps from Alfred
 ###############################################################################
-echo "Homebrew Cask: linking apps to Alfred..."
-brew cask alfred link
+# echo "Homebrew Cask: linking apps to Alfred..."
+# brew cask alfred link
 
 
 ###############################################################################
@@ -76,4 +85,8 @@ brew cask alfred link
 # mackup restore
 
 
-echo "Done!"
+###############################################################################
+# Cleanup
+###############################################################################
+brew cask cleanup
+echo "macOS Apps Done Setup!"
