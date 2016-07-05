@@ -50,10 +50,9 @@ unset file;
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Updates PATH for the Google Cloud SDK.
-source '/Users/j/google-cloud-sdk/path.bash.inc'
+source '/Users/j/dev/google-cloud-sdk/path.bash.inc'
 
 # Enables shell command completion for gcloud.
-source '/Users/j/google-cloud-sdk/completion.bash.inc'
+source '/Users/j/dev/google-cloud-sdk/completion.bash.inc'
 
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
-
