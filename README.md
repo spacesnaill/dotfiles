@@ -1,10 +1,21 @@
 # dotfiles
-> The simple way to manage your system config.
+> Setup and sync your Mac system in the quickest way possible.
 
 
 
 ## Overview
 This dotfiles project is a combination of some bash scripts and some dotfiles. The bash scripts automate setup and installation of dev tools, apps, symlinks, and other things. The dotfiles are local configuration files that we're moving to Dropbox in order to sync multiple systems to the same configuration.
+
+### Why?
+The hardest part about setting up a new computer is getting your configurations and tools up to par with your old machine. Maybe you're upgrading computers, maybe you're trying to sync multiple workstations, or maybe you want to protect yourself from a future catastrophe. A system like this makes it painless.
+
+### How It Works
+It's pretty straightforward. This system:
+
+* Symlinks your bash configurations, Git config and any other configs to Dropbox, allowing all of your machine to sync up to your configuration.
+* Automates installation of your dev tools mostly using Homebrew.
+* Automates installation of your Mac applications using Homebrew.
+* Automates the entire setup and configuration of macOS in seconds.
 
 ### Folder Structure
 The folder structure of my `~/Dropbox/_config` folder is this repo, plus some stuff not seen in this repo. With the amount of apps that support native Dropbox sync, I'm currently setting those up to sync to Dropbox in `_config/appdata`. I also sync a few additional apps, such as SublimeText.
@@ -30,7 +41,7 @@ _config/
     │   ├── setup-apps
     │   ├── setup-brew
     │   ├── setup-npm
-    │   ├── setup-osx
+    │   ├── setup-macos
     │   └── symlink
     └── themes
 ```
@@ -41,7 +52,7 @@ _config/
 * [setup-brew](/dotfiles/scripts/setup-brew) - Install and configure packages managed by Homebrew.
 * [setup-apps](/dotfiles/scripts/setup-apps) - Install and configure applications managed by Homebrew Cask.
 * [setup-npm](/dotfiles/scripts/setup-npm) - Install and configure packages managed by NPM.
-* [setup-osx](/dotfiles/scripts/setup-osx) - Set your OS X defaults. Reboot required.
+* [setup-macos](/dotfiles/scripts/setup-macos) - Set your macOS defaults. Reboot required.
 
 
 
