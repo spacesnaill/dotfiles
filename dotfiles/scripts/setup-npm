@@ -11,12 +11,15 @@
 # Install Node Packages with NPM
 ###############################################################################
 echo “Node: installing NPM packages…”
-npm install -g eslint
-npm install -g firebase-tools
-npm install -g grunt-cli
-npm install -g npm
-npm install -g svgo
-npm install -g uglify
-npm install -g vue-cli
-npm install -g webpack
-npm install -g wt-cli
+npm i -g @squarespace/squarespace-dev-server
+npm i -g eslint
+npm i -g firebase-tools
+npm i -g grunt-cli
+npm i -g newman
+npm i -g npm
+npm i -g pageres-cli
+npm i -g svgo
+npm i -g uglify
+npm i -g vue-cli
+npm i -g webpack
+npm i -g wt-cli
