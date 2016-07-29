@@ -38,6 +38,11 @@ export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 # Homebrew Defaults
 # export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
 
+# Bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+
 # Load shell dotfiles
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
