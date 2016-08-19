@@ -39,8 +39,8 @@ brew cask install atom
 brew cask install backblaze
 brew cask install boom
 brew cask install dash
+brew cask install docker
 # brew cask install dropbox
-brew cask install fetch
 brew cask install firefox
 brew cask install flux
 brew cask install framer
@@ -55,6 +55,7 @@ brew cask install java
 brew cask install obs
 brew cask install omnidazzle
 brew cask install paparazzi
+brew cask install paw
 brew cask install postman
 brew cask install private-internet-access
 brew cask install rescuetime
