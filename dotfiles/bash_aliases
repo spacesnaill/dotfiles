@@ -155,3 +155,6 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 # Reload Launchpad
 # http://www.defaults-write.com/active-defaults-setting-for-os-x-launchpad/#.U_issVNdUeM
 alias fixlaunchpad="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock"
+
+# Squarespace CLI Dev
+alias sqsd="~/Dropbox/Projects/dev/personal/squarespace-cli/squarespace.js"
