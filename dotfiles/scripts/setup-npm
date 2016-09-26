@@ -17,8 +17,11 @@ npm i -g firebase-tools
 npm i -g foundation-cli
 npm i -g grunt-cli
 npm i -g gulp
+npm i -g http-server
 npm i -g imageoptim-cli
+npm i -g netlify-cli
 npm i -g newman
+npm i -g nodemon
 npm i -g npm
 npm i -g pageres-cli
 npm i -g squarespace-cli
