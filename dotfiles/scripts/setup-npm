@@ -11,7 +11,7 @@
 # Install Node Packages with NPM
 ###############################################################################
 echo “Node: installing NPM packages…”
-npm i -g @squarespace/squarespace-server
+npm i -g @squarespace/server
 npm i -g eslint
 npm i -g firebase-tools
 npm i -g foundation-cli
@@ -27,6 +27,7 @@ npm i -g pageres-cli
 npm i -g squarespace-cli
 npm i -g svgo
 npm i -g uglify
+npm i -g ultradns-node-cli
 npm i -g vue-cli
 npm i -g webpack
 npm i -g webpack-dev-server
