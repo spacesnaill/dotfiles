@@ -18,6 +18,7 @@ npm i -g foundation-cli
 npm i -g grunt-cli
 npm i -g gulp
 npm i -g http-server
+npm i -g hpm-cli
 npm i -g imageoptim-cli
 npm i -g netlify-cli
 npm i -g newman
