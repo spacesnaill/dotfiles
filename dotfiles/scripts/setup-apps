@@ -74,6 +74,7 @@ brew cask install sublime-text
 brew cask install teamviewer
 brew cask install textexpander
 brew cask install toggldesktop
+brew cask install transmit
 
 
 ###############################################################################
