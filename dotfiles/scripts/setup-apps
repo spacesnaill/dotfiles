@@ -60,12 +60,14 @@ brew cask install paw
 brew cask install postman
 brew cask install private-internet-access
 brew cask install rescuetime
+brew cask install screaming-frog-seo-spider
 brew cask install screenflow
 brew cask install screenhero
 brew cask install sketch
 brew cask install sketch-toolbox
 brew cask install skype
 brew cask install slack
+brew cask install sonos
 brew cask install spectacle
 brew cask install spotify
 brew cask install sublime-text
