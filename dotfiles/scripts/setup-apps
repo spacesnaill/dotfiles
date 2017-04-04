@@ -36,17 +36,15 @@ brew cask install 1password
 brew cask install adobe-creative-cloud
 brew cask install alfred
 brew cask install atom
-brew cask install backblaze
-brew cask install boom
+brew cask install box-sync
 brew cask install dash
 brew cask install docker
 # brew cask install dropbox
 brew cask install firefox
-brew cask install flux
 brew cask install framer
 brew cask install github-desktop
 brew cask install gitter
-# brew cask install google-cloud-sdk
+brew cask install google-cloud-sdk
 brew cask install google-chrome
 brew cask install google-drive
 brew cask install hipchat
@@ -59,7 +57,6 @@ brew cask install paparazzi
 brew cask install paw
 brew cask install postman
 brew cask install private-internet-access
-brew cask install rescuetime
 brew cask install screaming-frog-seo-spider
 brew cask install screenflow
 brew cask install screenhero
@@ -72,7 +69,6 @@ brew cask install spectacle
 brew cask install spotify
 brew cask install sublime-text
 brew cask install teamviewer
-brew cask install textexpander
 brew cask install toggldesktop
 brew cask install transmit
 
