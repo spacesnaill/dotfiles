@@ -29,7 +29,6 @@ _config/
 │   ├── 1Password
 │   ├── Alfred
 │   ├── Sublime
-│   ├── TextExpander
 │   └── iTerm
 └── dotfiles
     ├── bash_aliases
