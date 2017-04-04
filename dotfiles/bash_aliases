@@ -21,7 +21,9 @@ alias dl="cd ~/Dropbox/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Dropbox/Projects"
 alias dv='cd ~/Dropbox/Projects/dev'
-alias cdsf='cd ~/Dropbox/Projects/dev/personal/squarefront-squarespace'
+alias cdp='cd ~/Dropbox/Projects/dev/personal'
+alias cdpub='cd ~/Dropbox/Projects/dev/publish'
+alias cdu='cd ~/Dropbox/Projects/dev/uber'
 alias g="git"
 alias h="history"
 alias j="jobs"
@@ -161,4 +163,4 @@ alias fixlaunchpad="defaults write com.apple.dock ResetLaunchPad -bool true; kil
 alias sqsd="~/Dropbox/Projects/dev/personal/squarespace-cli/squarespace.js"
 
 # UltraDNS Node CLI Dev
-alias ultra="~/Dropbox/Projects/dev/personal/ultradns-node-cli/client.js"
+alias ultra="~/Dropbox/Projects/dev/personal/ultradns-node-cli/src/ultradns.js"
