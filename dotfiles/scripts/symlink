@@ -31,9 +31,6 @@ ln -s ${CONFIG_DIR}/wgetrc .wgetrc
 rm -rf .curlrc
 ln -s ${CONFIG_DIR}/curlrc .curlrc
 
-rm -rf .mackup.cfg
-ln -s ${CONFIG_DIR}/mackup.cfg .mackup.cfg
-
 
 # Link local Sublime Text config to Dropbox
 echo "Linking local Sublime Text config to ~/Dropbox/_config/appdata/Sublime..."
