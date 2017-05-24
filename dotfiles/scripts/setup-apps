@@ -47,7 +47,6 @@ brew cask install gitter
 brew cask install google-cloud-sdk
 brew cask install google-chrome
 brew cask install google-drive
-brew cask install hipchat
 brew cask install hyper
 brew cask install imageoptim
 brew cask install java
@@ -59,7 +58,6 @@ brew cask install postman
 brew cask install private-internet-access
 brew cask install screaming-frog-seo-spider
 brew cask install screenflow
-brew cask install screenhero
 brew cask install sketch
 brew cask install sketch-toolbox
 brew cask install skype
