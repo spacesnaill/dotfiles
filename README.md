@@ -15,7 +15,7 @@ It's pretty straightforward. This system:
 * Symlinks your bash configurations, Git config and any other configs to Dropbox, allowing all of your machine to sync up to your configuration.
 * Automates installation of your dev tools mostly using Homebrew.
 * Automates installation of your Mac applications using Homebrew.
-* Automates the entire setup and configuration of macOS in seconds.
+* Automates the entire setup and configuration of macOS by using command line settings in seconds.
 
 ### Folder Structure
 The folder structure of my `~/Dropbox/_config` folder is this repo, plus some stuff not seen in this repo. With the amount of apps that support native Dropbox sync, I'm currently setting those up to sync to Dropbox in `_config/appdata`. I also sync a few additional apps, such as SublimeText.
@@ -35,7 +35,6 @@ _config/
     ├── bash_profile
     ├── bash_prompt
     ├── gitconfig
-    ├── mackup.cfg
     ├── scripts
     │   ├── setup-apps
     │   ├── setup-brew
