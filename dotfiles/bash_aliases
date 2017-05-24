@@ -15,7 +15,7 @@ alias .....="cd ../../../.."
 alias ~="cd ~"
 alias -- -="cd -"
 
-# Shortcuts
+# Path Shortcuts
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Dropbox/Downloads"
 alias dt="cd ~/Desktop"
@@ -24,6 +24,9 @@ alias dv='cd ~/Dropbox/Projects/dev'
 alias cdp='cd ~/Dropbox/Projects/dev/personal'
 alias cdpub='cd ~/Dropbox/Projects/dev/publish'
 alias cdu='cd ~/Dropbox/Projects/dev/uber'
+
+# Command/App Shortcuts
+alias a="atom"
 alias g="git"
 alias h="history"
 alias j="jobs"
