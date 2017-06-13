@@ -12,6 +12,8 @@
 ###############################################################################
 echo “Node: installing NPM packages…”
 npm i -g @squarespace/server
+npm i -g contentful-export
+npm i -g contentful-import
 npm i -g eslint
 npm i -g firebase-tools
 npm i -g foundation-cli
@@ -21,6 +23,7 @@ npm i -g http-server
 npm i -g hpm-cli
 npm i -g imageoptim-cli
 npm i -g js-beautify
+npm i -g markdown-pdf
 npm i -g netlify-cli
 npm i -g newman
 npm i -g nodemon
