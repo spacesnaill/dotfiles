@@ -23,7 +23,7 @@ alias p="cd ~/Dropbox/Projects"
 alias dv='cd ~/Dropbox/Projects/dev'
 alias cdp='cd ~/Dropbox/Projects/dev/personal'
 alias cdpub='cd ~/Dropbox/Projects/dev/publish'
-alias cdu='cd ~/Dropbox/Projects/dev/uber'
+alias cdu='cd ~/Box\ Sync/uber-dev'
 
 # Command/App Shortcuts
 alias a="atom"
