@@ -14,6 +14,7 @@ echo “Node: installing NPM packages…”
 # Bypass Squarespace Terms of Service
 echo -ne '\n' | npm i -g @squarespace/server
 npm i -g contentful-export
+npm i -g contentful-extension-cli
 npm i -g contentful-import
 npm i -g eslint
 npm i -g firebase-tools
