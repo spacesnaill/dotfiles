@@ -16,11 +16,17 @@ echo "Linking local config to ~/Dropbox/_config dotfiles..."
 rm -rf .bash_aliases
 ln -s ${CONFIG_DIR}/bash_aliases .bash_aliases
 
+rm -rf .bash_aliases_dev
+ln -s ${CONFIG_DIR}/bash_aliases_dev .bash_aliases_dev
+
 rm -rf .bash_profile
 ln -s ${CONFIG_DIR}/bash_profile .bash_profile
 
 rm -rf .bash_prompt
 ln -s ${CONFIG_DIR}/bash_prompt .bash_prompt
+
+rm -rf .bash_work
+ln -s ${CONFIG_DIR}/bash_work .bash_work
 
 rm -rf .gitconfig
 ln -s ${CONFIG_DIR}/gitconfig .gitconfig

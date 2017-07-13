@@ -72,17 +72,15 @@ brew cask install transmit
 
 
 ###############################################################################
-# Launch apps from Alfred
+# Execute installers downloaded with Homebrew Cask
 ###############################################################################
-# echo "Homebrew Cask: linking apps to Alfred..."
-# brew cask alfred link
+echo "Opening installers..."
 
+echo "Opening Installer: Adobe Creative Cloud"
+open /usr/local/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.app/
 
-###############################################################################
-# Copy application preferences & config files with Mackup
-###############################################################################
-# echo "Mackup: restoring application preferences..."
-# mackup restore
+echo "Opening Installer: Private Internet Access"
+open /usr/local/Caskroom/private-internet-access/latest/Private\ Internet\ Access\ Installer.app
 
 
 ###############################################################################

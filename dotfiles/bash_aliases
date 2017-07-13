@@ -20,10 +20,10 @@ alias d="cd ~/Dropbox"
 alias dl="cd ~/Dropbox/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Dropbox/Projects"
+alias dev='cd ~/dev'
 alias dv='cd ~/Dropbox/Projects/dev'
 alias cdp='cd ~/Dropbox/Projects/dev/personal'
 alias cdpub='cd ~/Dropbox/Projects/dev/publish'
-alias cdu='cd ~/Box\ Sync/uber-dev'
 
 # Command/App Shortcuts
 alias a="atom"
@@ -161,9 +161,3 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 # Reload Launchpad
 # http://www.defaults-write.com/active-defaults-setting-for-os-x-launchpad/#.U_issVNdUeM
 alias fixlaunchpad="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock"
-
-# Squarespace CLI Dev
-alias sqsd="~/Dropbox/Projects/dev/personal/squarespace-cli/squarespace.js"
-
-# UltraDNS Node CLI Dev
-alias ultra="~/Dropbox/Projects/dev/personal/ultradns-node-cli/src/ultradns.js"

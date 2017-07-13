@@ -11,7 +11,8 @@
 # Install Node Packages with NPM
 ###############################################################################
 echo “Node: installing NPM packages…”
-npm i -g @squarespace/server
+# Bypass Squarespace Terms of Service
+echo -ne '\n' | npm i -g @squarespace/server
 npm i -g contentful-export
 npm i -g contentful-import
 npm i -g eslint
@@ -27,6 +28,7 @@ npm i -g markdown-pdf
 npm i -g netlify-cli
 npm i -g newman
 npm i -g nodemon
+npm i -g now
 npm i -g npm
 npm i -g pageres-cli
 npm i -g squarespace-cli

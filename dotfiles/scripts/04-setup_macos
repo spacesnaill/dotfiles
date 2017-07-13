@@ -480,3 +480,11 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 
 # Disable continuous spell checking
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
+
+
+################################################################################
+# Alfred
+###############################################################################
+
+# Set sync folder to Dropbox
+defaults write com.runningwithcrayons.Alfred-Preferences-3 syncfolder -string "~/Dropbox/_config/appdata/Alfred"

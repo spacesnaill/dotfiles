@@ -18,6 +18,7 @@ EOF
 ###############################################################################
 
 export PATH=$PATH:~/bin
+export PATH="/usr/local/sbin:$PATH"
 
 # Set Sublime Text as a default editor
 export EDITOR='subl -w'
@@ -36,7 +37,7 @@ fi
 # Load shell dotfiles
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,bash_aliases,functions,extra}; do
+for file in ~/.{path,bash_prompt,bash_aliases,bash_aliases_dev,bash_work,functions,extra}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -54,3 +55,4 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.i
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
 
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
+
