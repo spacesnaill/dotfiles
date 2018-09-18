@@ -31,16 +31,14 @@ ln -s ${CONFIG_DIR}/bash_work .bash_work
 rm -rf .gitconfig
 ln -s ${CONFIG_DIR}/gitconfig .gitconfig
 
+rm -rf .gitconfig
+ln -s ${CONFIG_DIR}/gitconfig_work .gitconfig_work
+
 rm -rf .wgetrc
 ln -s ${CONFIG_DIR}/wgetrc .wgetrc
 
 rm -rf .curlrc
 ln -s ${CONFIG_DIR}/curlrc .curlrc
-
-
-# Link local Sublime Text config to Dropbox
-echo "Linking local Sublime Text config to ~/Dropbox/_config/appdata/Sublime..."
-cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ && rm -r User && ln -s ~/Dropbox/_config/appdata/Sublime/User
 
 
 echo "Finished pointing local config to dotfiles..."
