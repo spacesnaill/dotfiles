@@ -20,8 +20,8 @@ EOF
 export PATH=$PATH:~/bin
 export PATH="/usr/local/sbin:$PATH"
 
-# Set Sublime Text as a default editor
-export EDITOR='subl -w'
+# Set VSCode as a default editor
+export EDITOR='code -w'
 
 # Homebrew coreutils
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
@@ -56,3 +56,5 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 
+export NVM_DIR="$HOME/.nvm"
+  . "/usr/local/opt/nvm/nvm.sh"
