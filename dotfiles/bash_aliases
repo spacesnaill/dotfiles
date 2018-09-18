@@ -32,6 +32,7 @@ alias h="history"
 alias j="jobs"
 alias o="open"
 alias s="subl"
+alias v="code"
 
 # Detect which `ls` is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
