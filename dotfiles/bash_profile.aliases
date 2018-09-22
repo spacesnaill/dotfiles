@@ -36,11 +36,7 @@ alias o="open"
 alias v="code"
 
 # Detect which `ls` is in use
-if ls --color > /dev/null 2>&1; then # GNU `ls`
-    colorflag="--color"
-else # OS X `ls`
-    colorflag="-G"
-fi
+colorflag=--color
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
