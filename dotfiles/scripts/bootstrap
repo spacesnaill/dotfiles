@@ -55,6 +55,7 @@ brew install moreutils
 echo "Homebrew: installing binaries and other packages..."
 brew install ffmpeg --with-libvpx
 brew install git
+brew install heroku/brew/heroku
 brew install httpie
 brew install imagemagick --with-webp
 brew install mackup
@@ -189,4 +190,4 @@ mas install 1153157709
 mas install 494803304
 
 
-echo "macOS Apps Done Setup!"
+echo "macOS Config, Dev Tools, Apps are Done Setup!"

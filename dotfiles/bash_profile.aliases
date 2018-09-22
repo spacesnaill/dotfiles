@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ###############################################################################
 # bash_aliases
 ###############################################################################
@@ -21,9 +23,9 @@ alias dl="cd ~/Dropbox/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Dropbox/Projects"
 alias dev='cd ~/dev'
-alias dv='cd ~/Dropbox/Projects/dev'
+alias cddev='cd ~/Dropbox/Projects/dev'
 alias cdp='cd ~/Dropbox/Projects/dev/personal'
-alias cdpub='cd ~/Dropbox/Projects/dev/publish'
+alias cdplatform='cd ~/Dropbox/Projects/dev/platform'
 
 # Command/App Shortcuts
 alias a="atom"
@@ -31,7 +33,6 @@ alias g="git"
 alias h="history"
 alias j="jobs"
 alias o="open"
-alias s="subl"
 alias v="code"
 
 # Detect which `ls` is in use

@@ -1,44 +1,65 @@
 #!/bin/bash
 
 ###############################################################################
-# symlink
+# setup_symlinks
 #
 # A shell script to setup symlinks for your local config files.
 ###############################################################################
 
+# Personal config
+PERSONAL_DIR=~/Dropbox/_config/dotfiles
 
-CONFIG_DIR=~/Dropbox/_config/dotfiles
+# Work config
+WORK_DIR=~/Dropbox/_config/dotfiles-work
 
 cd ~
 
 echo "Linking local config to ~/Dropbox/_config dotfiles..."
 
-rm -rf .bash_aliases
-ln -s ${CONFIG_DIR}/bash_aliases .bash_aliases
+rm .bash_profile
+ln -s ${PERSONAL_DIR}/bash_profile .bash_profile
 
-rm -rf .bash_aliases_dev
-ln -s ${CONFIG_DIR}/bash_aliases_dev .bash_aliases_dev
+rm .bash_profile.aliases
+ln -s ${PERSONAL_DIR}/bash_profile.aliases .bash_profile.aliases
 
-rm -rf .bash_profile
-ln -s ${CONFIG_DIR}/bash_profile .bash_profile
+rm .bash_profile.aliases-dev
+ln -s ${PERSONAL_DIR}/bash_profile.aliases-dev .bash_profile.aliases-dev
 
-rm -rf .bash_prompt
-ln -s ${CONFIG_DIR}/bash_prompt .bash_prompt
+rm .bash_profile.intro
+ln -s ${PERSONAL_DIR}/bash_profile.intro .bash_profile.intro
 
-rm -rf .bash_work
-ln -s ${CONFIG_DIR}/bash_work .bash_work
-
-rm -rf .gitconfig
-ln -s ${CONFIG_DIR}/gitconfig .gitconfig
+rm .bash_profile.prompt
+ln -s ${PERSONAL_DIR}/bash_profile.prompt .bash_profile.prompt
 
 rm -rf .gitconfig
-ln -s ${CONFIG_DIR}/gitconfig_work .gitconfig_work
+ln -s ${PERSONAL_DIR}/gitconfig .gitconfig
+
+rm -rf .gitconfig.personal
+ln -s ${PERSONAL_DIR}/gitconfig.personal .gitconfig.personal
+
+rm -rf .mackup.cfg
+ln -s ${PERSONAL_DIR}/mackup.cfg .mackup.cfg
 
 rm -rf .wgetrc
-ln -s ${CONFIG_DIR}/wgetrc .wgetrc
+ln -s ${PERSONAL_DIR}/wgetrc .wgetrc
 
 rm -rf .curlrc
-ln -s ${CONFIG_DIR}/curlrc .curlrc
+ln -s ${PERSONAL_DIR}/curlrc .curlrc
 
+rm .bash_profile.work
+ln -s ${WORK_DIR}/bash_profile.work .bash_profile.work
 
-echo "Finished pointing local config to dotfiles..."
+rm -rf .gitconfig.work
+ln -s ${WORK_DIR}/gitconfig.work .gitconfig.work
+
+rm -rf .gitconfig.work-uber
+ln -s ${WORK_DIR}/gitconfig.work-uber .gitconfig.work-uber
+
+rm -rf .gitconfig.work-uber-user
+ln -s ${WORK_DIR}/gitconfig.work-uber-user .gitconfig.work-uber-user
+
+echo "Running mackup restore to symlink application configs..."
+
+mackup restore
+
+echo "Finished symlinking all configurations."

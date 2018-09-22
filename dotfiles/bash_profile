@@ -1,52 +1,15 @@
+#!/bin/bash
+
 ###############################################################################
 # bash_profile
 ###############################################################################
 
-###############################################################################
-# Ascii - begin
-###############################################################################
-cat <<"EOF"
-
-
-       ■ ■
-       ■ ■ ■
-     ■ ■ ■ ■
-
-EOF
-###############################################################################
-# Ascii - end
-###############################################################################
-
-export PATH=$PATH:~/bin
-export PATH="/usr/local/sbin:$PATH"
-
-# Set VSCode as a default editor
-export EDITOR='code -w'
-
-# Homebrew coreutils
-export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
-
-# Homebrew Defaults
-# export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
-
-# Bash completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-. $(brew --prefix)/etc/bash_completion
-fi
-
 # Load shell dotfiles
-# * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,bash_aliases,bash_aliases_dev,bash_work,functions,extra}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
-
-# Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# Updated PATH for yarn
-export PATH="$PATH:$HOME/.yarn/bin"
+source ${HOME}/.bash_profile.aliases
+source ${HOME}/.bash_profile.aliases-dev
+source ${HOME}/.bash_profile.intro
+source ${HOME}/.bash_profile.prompt
+source ${HOME}/.bash_profile.work
 
 # Updates PATH for the Google Cloud SDK, installed via Homebrew.
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
@@ -54,7 +17,35 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.i
 # Enables shell command completion for Google Cloud SDK, installed via Homebrew.
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
 
-test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
+export PATH=$PATH:~/bin
+export PATH="/usr/local/sbin:$PATH"
 
+# Homebrew coreutils
+export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+
+# Yarn
+export PATH="$PATH:$HOME/.yarn/bin"
+
+# NVM - Node Version Manager
 export NVM_DIR="$HOME/.nvm"
   . "/usr/local/opt/nvm/nvm.sh"
+
+# Heroku CLI
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# Set VSCode as a default editor
+export EDITOR='code -w'
+
+# Bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+
+test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
+
+
+###############################################################################
+# Everything below this comment was probably added by an application or
+# package. To keep things organized, you should probably put them into
+# your sourced config files above :)
+###############################################################################
