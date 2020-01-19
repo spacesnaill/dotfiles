@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/zsh
 
 ###############################################################################
-# gitconfig - personal
+# gitconfig.personal
 ###############################################################################
 
 [user]
@@ -10,11 +10,6 @@
 
 [credential]
     helper = osxkeychain
-
-[filter "lfs"]
-    clean = git-lfs clean %f
-    smudge = git-lfs smudge %f
-    required = true
 
 [color]
   ui = auto
@@ -37,3 +32,9 @@
 
 [core]
 	excludesfile = /Users/jasonbarone/.gitignore_global
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

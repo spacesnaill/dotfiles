@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 ###############################################################################
 # setup_symlinks
@@ -9,54 +9,18 @@
 # Personal config
 PERSONAL_DIR=~/Dropbox/_config/dotfiles
 
-# Work config
-WORK_DIR=~/Dropbox/_config/dotfiles-work
-
 cd ~
 
 echo "Linking local config to ~/Dropbox/_config dotfiles..."
 
-rm .bash_profile
-ln -s ${PERSONAL_DIR}/bash_profile .bash_profile
-
-rm .bash_profile.aliases
-ln -s ${PERSONAL_DIR}/bash_profile.aliases .bash_profile.aliases
-
-rm .bash_profile.aliases-dev
-ln -s ${PERSONAL_DIR}/bash_profile.aliases-dev .bash_profile.aliases-dev
-
-rm .bash_profile.intro
-ln -s ${PERSONAL_DIR}/bash_profile.intro .bash_profile.intro
-
-rm .bash_profile.prompt
-ln -s ${PERSONAL_DIR}/bash_profile.prompt .bash_profile.prompt
-
 rm -rf .gitconfig
 ln -s ${PERSONAL_DIR}/gitconfig .gitconfig
-
-rm -rf .gitconfig.personal
-ln -s ${PERSONAL_DIR}/gitconfig.personal .gitconfig.personal
 
 rm -rf .mackup.cfg
 ln -s ${PERSONAL_DIR}/mackup.cfg .mackup.cfg
 
-rm -rf .wgetrc
-ln -s ${PERSONAL_DIR}/wgetrc .wgetrc
-
-rm -rf .curlrc
-ln -s ${PERSONAL_DIR}/curlrc .curlrc
-
-rm .bash_profile.work
-ln -s ${WORK_DIR}/bash_profile.work .bash_profile.work
-
-rm -rf .gitconfig.work
-ln -s ${WORK_DIR}/gitconfig.work .gitconfig.work
-
-rm -rf .gitconfig.work-uber
-ln -s ${WORK_DIR}/gitconfig.work-uber .gitconfig.work-uber
-
-rm -rf .gitconfig.work-uber-user
-ln -s ${WORK_DIR}/gitconfig.work-uber-user .gitconfig.work-uber-user
+rm -rf .zshrc
+ln -s ${PERSONAL_DIR}/zshrc .zshrc
 
 echo "Running mackup restore to symlink application configs..."
 

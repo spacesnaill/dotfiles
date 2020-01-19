@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/zsh
 
 ###############################################################################
-# bash_aliases
+# aliases
 ###############################################################################
 
 
@@ -9,84 +9,62 @@
 # Command Line Shortcuts
 ###############################################################################
 
-# Directory navigation
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ~="cd ~"
-alias -- -="cd -"
-
 # Path Shortcuts
 alias d="cd ~/Dropbox"
-alias dl="cd ~/Dropbox/Downloads"
+alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/Dropbox/Projects"
 alias dev='cd ~/dev'
-alias cddev='cd ~/Dropbox/Projects/dev'
-alias cdp='cd ~/Dropbox/Projects/dev/personal'
-alias cdplatform='cd ~/Dropbox/Projects/dev/platform'
 
 # Command/App Shortcuts
-alias a="atom"
-alias g="git"
 alias h="history"
-alias j="jobs"
 alias o="open"
 alias v="code"
 
-# Detect which `ls` is in use
-colorflag=--color
-
 # List all files colorized in long format
-alias l="ls -lF ${colorflag}"
+# alias l="ls -lF"
 
 # List all files colorized in long format, including dot files
-alias la="ls -laF ${colorflag}"
+# alias la="ls -laF"
 
 # List only directories
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+# alias lsd="ls -lF | grep --color=never '^d'"
 
 # Always use color output for `ls`
-alias ls="command ls ${colorflag}"
-
-# COLORS for LS
-export CLICOLOR=1
-export LSCOLORS=gxfxcxdxbxegedabagaced
+# alias ls="command ls"
 
 # Enable aliases to be sudo’ed
-alias sudo='sudo '
+# alias sudo='sudo '
 
 # Get week number
-alias week='date +%V'
+# alias week='date +%V'
 
 # Stopwatch
-alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+# alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
+# alias c="tr -d '\n' | pbcopy"
 
 # URL-encode strings
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+# alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
 # Merge PDF files
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
-alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
+# alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
 
 # PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
-alias plistbuddy="/usr/libexec/PlistBuddy"
+# alias plistbuddy="/usr/libexec/PlistBuddy"
 
 # Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
 # (useful when executing time-consuming commands)
-alias badge="tput bel"
+# alias badge="tput bel"
 
 # Intuitive map function
 # For example, to list all directories that contain a certain file:
 # find . -name .gitattributes | map dirname
-alias map="xargs -n1"
+# alias map="xargs -n1"
 
 # Make Grunt print stack traces by default
-command -v grunt > /dev/null && alias grunt="grunt --stack"
+# command -v grunt > /dev/null && alias grunt="grunt --stack"
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
