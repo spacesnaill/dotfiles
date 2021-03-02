@@ -37,6 +37,16 @@ brew update
 echo "Homebrew: upgrading..."
 brew upgrade
 
+###############################################################################
+# Tap Kegs
+###############################################################################
+echo "Homebrew: Tapping kegs..."
+tap "adoptopenjdk/openjdk"
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
 
 ###############################################################################
 # Install utilities
@@ -45,11 +55,26 @@ echo "Homebrew: updating unix tools..."
 brew install zsh
 brew install homebrew/cask-fonts/font-fira-mono-for-powerline
 
+###############################################################################
+# Setup NVM, NodeJS, and Yarn
+###############################################################################
+echo "Homebrew: setting up nvm..."
+brew install nvm
+nvm --version
+nvm ls-remote
+nvm install --lts
+nvm ls
+nvm use default
+
+echo "Homebrew: setting up yarn..."
+brew install yarn
+
 
 ###############################################################################
 # Install binaries and other packages
 ###############################################################################
 echo "Homebrew: installing binaries and other packages..."
+brew install ruby
 brew install ffmpeg
 brew install git
 brew install heroku/brew/heroku
@@ -58,13 +83,27 @@ brew install imagemagick
 brew install mackup
 brew install mas
 brew install nginx
-brew install node
-brew install nvm
 brew install rename
 brew install tree
 brew install webkit2png
-brew install yarn
-
+brew install automake
+brew install coreutils
+brew install gh
+brew install sqlite
+brew install pkg-config
+brew install gnupg
+brew install jenv
+brew install libyaml
+brew install openjdk
+brew install maven
+brew install mysql
+brew install neovim
+brew install php
+brew install postgresql
+brew install source-highlight
+brew install terminal-notifier
+brew install tmux
+brew install zlib
 
 ###############################################################################
 # Run Homebrew cleanup to remove installation/cached files
@@ -77,71 +116,62 @@ brew cleanup
 # Install Node Packages with NPM
 ###############################################################################
 echo "Node: installing Yarn/NPM packages…"
-yarn global add @sanity/cli
-yarn global add @squarespace/server
-yarn global add contentful-cli
-yarn global add firebase-tools
 yarn global add http-server
-yarn global add imageoptim-cli
-yarn global add js-beautify
-yarn global add markdown-pdf
+yarn global add prettier
 yarn global add netlify-cli
-yarn global add now
-yarn global add svgo
 
 
 ###############################################################################
 # Install applications with Homebrew Cask
 ###############################################################################
 echo "Homebrew Cask: installing apps..."
-brew cask install 1password
-brew cask install ableton-live-suite
-brew cask install adobe-creative-cloud
-brew cask install alfred
-brew cask install dash
-brew cask install docker
+brew install --cask adoptopenjdk9
+brew install --cask caret
+brew install --cask cyberduck
+brew install --cask discord
+brew install --cask expressvpn
+brew install --cask gitkraken
+brew install --cask firefox
+brew install --cask google-chrome
+brew install --cask docker
+brew install --cask github
+brew install --cask postman
+brew install --cask sourcetree
+brew install --cask visual-studio-code
+brew install --cask lastpass
+brew install --cask alfred
+brew install --cask dash
+brew install --cask sketch
 # brew cask install dropbox
-brew cask install figma
-brew cask install firefox
-brew cask install framer-x
-brew cask install github
-brew cask install google-chrome
-brew cask install google-cloud-sdk
-brew cask install google-drive-file-stream
-brew cask install hyper
-brew cask install imageoptim
-brew cask install iina
-brew cask install iterm2
-brew cask install notion
-brew cask install nucleo
-brew cask install obs
-brew cask install postman
-brew cask install screenflow
-brew cask install skype
-brew cask install slack
-brew cask install spectacle
-brew cask install spotify
-brew cask install sourcetree
-brew cask install tor-browser
-brew cask install transmit
-brew cask install tunnelbear
-brew cask install visual-studio-code
-brew cask install whatsapp
+brew install --cask imageoptim
+brew install --cask iterm2
+brew install --cask notion
+brew install --cask obs
+brew install --cask slack
+brew install --cask spotify
+brew install --cask hazel
+brew install --cask istat-menus
+brew install --cask intellij-idea
+brew install --cask webstorm
+brew install --cask datagrip
+brew install --cask clipy
+brew install --cask wifi-explorer
+brew install --cask mysqlworkbench
+brew install --cask virtualbox
+
 
 
 ###############################################################################
-# Execute installers downloaded with Homebrew Cask
+# Install colorls
 ###############################################################################
-echo "Opening installers..."
-
-echo "Opening Installer: Adobe Creative Cloud"
-open /usr/local/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.app/
+echo "Installing colorls..."
+gem install colorls
 
 
 ###############################################################################
 # Cleanup
 ###############################################################################
-brew cask cleanup
+brew cleanup
 
 
 ###############################################################################
@@ -150,20 +180,28 @@ brew cask cleanup
 echo "mas-cli: installing Mac App Store apps..."
 # Amphetamine
 mas install 937984704
-# DaisyDisk
-mas install 411643860
-# JPEGmini
-mas install 498944723
-# Mactracker
-mas install 430255202
-# Sip
-mas install 507257563
-# Speedtest
-mas install 1153157709
-# Twitter
-mas install 1482454543
-# WiFi Explorer
-mas install 494803304
+# Boop
+mas install 1518425043
+# ColorSlurp
+mas install 1287239339
+# Microsoft Remote Desktop
+mas install 1295203466
+# Session
+mas install 1521432881
+# The Unarchiver
+mas install 425424353
+# Todoist
+mas install 585829637
+# Kindle
+mas install 405399194
+# Lastpass
+mas install 926036361
+
+
+echo "mas-cli: installing Safar extensions..."
+# Hush
+mas install 1544743900
 
 
 echo "macOS Config, Dev Tools, Apps are Done Setup!"
+echo "Make sure to add /System/Library/Java/... to jEnv with jenv add"

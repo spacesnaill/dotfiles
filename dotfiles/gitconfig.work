@@ -1,12 +1,12 @@
 #!/bin/zsh
 
 ###############################################################################
-# gitconfig.personal
+# gitconfig.work
 ###############################################################################
 
 [user]
-    name = Panda
-    email = sunrisestorm@protonmail.com
+    name = Patrick Geiger
+    email = patrick.geiger@octoconsulting.com
 
 [credential]
     helper = osxkeychain
