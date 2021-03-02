@@ -205,7 +205,7 @@ mas install 1544743900
 ###############################################################################
 # Install fonts
 ###############################################################################
-echo "Installing Dank Mono..."
+echo "Installing Dank Mono Font..."
 cp ~/Dropbox/dot_files/fonts/DankMono/ttf/DankMono-Italic.ttf ~/Library/Fonts
 cp ~/Dropbox/dot_files/fonts/DankMono/ttf/DankMono-Regular.ttf ~/Library/Fonts
 
