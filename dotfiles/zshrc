@@ -1,18 +1,33 @@
-#!/bin/zsh
+# jenv configuration
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+export MAVEN_OPTS="-Xms64m -Xmx8092m -Djava.awt.headless=true"
+export KARAF_DEBUG="true"
+
+# ensure that JAVA_HOME is correct
+jenv enable-plugin export
+# make Maven aware of the Java version in use (and switch when your project does)
+jenv enable-plugin maven
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/Dropbox/_config/appdata/oh-my-zsh"
-
-export PATH="/usr/local/sbin:$PATH"
+export ZSH="/Users/pgeiger/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -72,19 +87,11 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting bgnotify)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-CONFIG_DIR=~/Dropbox/_config/dotfiles
-CONFIG_DIR_WORK=~/Dropbox/_config/dotfiles-work
-
-# Load shell dotfiles
-source ${CONFIG_DIR}/aliases
-source ${CONFIG_DIR_WORK}/aliases.work
-source ${CONFIG_DIR}/intro
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -92,11 +99,11 @@ source ${CONFIG_DIR}/intro
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR="code -w"
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -109,3 +116,51 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias lsah="ls -lsah"
+alias brewup="brew update; brew upgrade; brew cleanup; brew doctor"
+alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias mysql_start="brew services start mysql"
+alias mysql_stop="brew services stop mysql"
+alias nvm_switch="nvm use && node -v"
+export PATH="/usr/local/sbin:$PATH"
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# place this after nvm initialization!
+# switches to the node version described in a .nvmrc if it exists otherwise uses default for system
+# autoload -U add-zsh-hook
+# load-nvmrc() {
+#  if [[ -f .nvmrc && -r .nvmrc ]]; then
+#    nvm use
+#  elif [[ $(nvm version) != $(nvm version default)  ]]; then
+#    echo "Reverting to nvm default version"
+#    nvm use default
+#  fi
+#}
+#add-zsh-hook chpwd load-nvmrc
+#load-nvmrc
+
+
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$PATH:$HOME/.rvm/bin"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# colorls configuration
+source $(dirname $(gem which colorls))/tab_complete.sh
+# colorls alias
+alias lc='colorls -A --sd'
+
+# 'less' syntax highlighting + source-highlight installation
+LESSPIPE=$(which src-hilite-lesspipe.sh)
+export LESSOPEN="| ${LESSPIPE} %s"
+export LESS=' -R -X -F '
