@@ -209,5 +209,8 @@ echo "Installing Dank Mono Font..."
 cp ~/Dropbox/dot_files/fonts/DankMono/ttf/DankMono-Italic.ttf ~/Library/Fonts
 cp ~/Dropbox/dot_files/fonts/DankMono/ttf/DankMono-Regular.ttf ~/Library/Fonts
 
+echo "Installing Powerlevel10k for Oh My Zsh..."
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
 echo "macOS Config, Dev Tools, Apps are Done Setup!"
 echo "Make sure to add /System/Library/Java/... to jEnv with jenv add"
