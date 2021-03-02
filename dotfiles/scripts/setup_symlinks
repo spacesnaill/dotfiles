@@ -13,17 +13,17 @@ cd ~
 
 echo "Linking local config to ~/Dropbox/_config dotfiles..."
 
-rm -rf .gitconfig
-ln -s ${PERSONAL_DIR}/gitconfig .gitconfig
+# rm -rf .gitconfig
+# ln -s ${PERSONAL_DIR}/gitconfig .gitconfig
 
-rm -rf .mackup.cfg
-ln -s ${PERSONAL_DIR}/mackup.cfg .mackup.cfg
+# rm -rf .mackup.cfg
+# ln -s ${PERSONAL_DIR}/mackup.cfg .mackup.cfg
 
 rm -rf .zshrc
 ln -s ${PERSONAL_DIR}/zshrc .zshrc
 
-echo "Running mackup restore to symlink application configs..."
+# echo "Running mackup restore to symlink application configs..."
 
-mackup restore
+# mackup restore
 
 echo "Finished symlinking all configurations."

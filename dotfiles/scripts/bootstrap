@@ -202,6 +202,12 @@ echo "mas-cli: installing Safar extensions..."
 # Hush
 mas install 1544743900
 
+###############################################################################
+# Install fonts
+###############################################################################
+echo "Installing Dank Mono..."
+cp ~/Dropbox/dot_files/fonts/DankMono/ttf/DankMono-Italic.ttf ~/Library/Fonts
+cp ~/Dropbox/dot_files/fonts/DankMono/ttf/DankMono-Regular.ttf ~/Library/Fonts
 
 echo "macOS Config, Dev Tools, Apps are Done Setup!"
 echo "Make sure to add /System/Library/Java/... to jEnv with jenv add"
